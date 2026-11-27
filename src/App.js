@@ -183,7 +183,7 @@ class App extends Component {
 
   /*** Handler functions ***/
   handleUp(e) {
-    const upPosition = '1234567890-='.split('').indexOf(e.key);
+    const upPosition = '1234567890ß´'.split('').indexOf(e.key);
     const currentPosition = this.state.barSelect.indexOf(1);
     // Last boolean handles case where
     // 1) User plays chord 'g' (WLOG)
@@ -240,7 +240,7 @@ class App extends Component {
       return;
     }
     // Get new bar position
-    const position = '1234567890-='.split('').indexOf(touchKey);
+    const position = '1234567890ß´'.split('').indexOf(touchKey);
     const newBarSelect = Array(TOUCH_BAR_LENGTH).fill(0);
     newBarSelect[position] = 1;
 
