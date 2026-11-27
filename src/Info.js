@@ -2,6 +2,7 @@ import './css/Info.css';
 
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { inject } from '@vercel/analytics';
 
 // This component is entirely HTML and CSS.
 export default function Info(props) {
@@ -10,6 +11,8 @@ export default function Info(props) {
   window.onkeyup = undefined;
   document.body.margin = 0;
   document.body.padding = 0;
+  // Initialize Vercel Analytics
+  inject();
   return (
     <div id='infoDiv'>
       <div id='headerDiv'>

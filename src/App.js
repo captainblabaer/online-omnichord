@@ -4,6 +4,7 @@ import ButtonSpace from './ButtonSpace';
 import TouchBar from './TouchBar';
 import { Link } from 'react-router-dom';
 import { Howl } from 'howler';
+import { inject } from '@vercel/analytics';
 import './css/App.css';
 import './css/Led.css';
 
@@ -109,6 +110,8 @@ class App extends Component {
     const color = ranCol();
     document.getElementById('top').style.backgroundColor = color;
     document.title = 'Online Omnichord';
+    // Initialize Vercel Analytics
+    inject();
   }
 
   // when we switch to the info page, we need to stop all the sounds
