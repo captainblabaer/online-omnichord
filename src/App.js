@@ -133,7 +133,7 @@ class App extends Component {
 
   /* Helper function that determines if a key is a valid touch bar key */
   isValidTouchKey(key) {
-    return (key in _.range(10) || key === '-' || key === '=');
+    return (key in _.range(10) || key === 'ß' || key === '´');
   }
 
   getNewChords(newKey) {
